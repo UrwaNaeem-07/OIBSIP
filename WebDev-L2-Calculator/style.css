@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e8f0f2;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    width: 330px;
+    background: #222;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.display {
+    background: #111;
+    color: white;
+    min-height: 90px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    text-align: right;
+    overflow: hidden;
+}
+
+#expression {
+    height: 25px;
+    color: #aaa;
+    font-size: 16px;
+}
+
+#result {
+    font-size: 32px;
+    margin-top: 8px;
+    word-wrap: break-word;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background: #eee;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.operator {
+    background: #f0a23b;
+    color: white;
+}
+
+.special {
+    background: #777;
+    color: white;
+}
+
+#equals {
+    background: #4caf50;
+    color: white;
+    grid-row: span 2;
+    height: 130px;
+}
+
+#decimal {
+    background: #ddd;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+@media screen and (max-width: 400px) {
+
+    .calculator {
+        width: 90%;
+    }
+
+    button {
+        height: 55px;
+    }
+
+    #equals {
+        height: 120px;
+    }
+}
